@@ -15,7 +15,7 @@ pip install python-docx openpyxl python-pptx pdfminer.six
 Prepare the Name List:
 Create a text file name_list.txt with the names you want to search for. Each name should be on a new line.
 
-## Example ad_soyad_listesi.txt:
+## Example name_list.txt:
 
 Ahmet 
 Mehmet 
@@ -29,24 +29,7 @@ Tunahan
 ## Modify the Script:
 Ensure the path to your name list is correctly set in the script.
 
-## python
-```bash
-def main():
-    root_directory = input("Enter the root directory to scan: ")
-    ad_soyad_dosyasi = 'path/to/ad_soyad_listesi.txt'  # Set the path to your name list file
-    ad_soyad_listesi = load_ad_soyad_listesi(ad_soyad_dosyasi)
-    
-    matched_files = find_files_with_ad_soyad(root_directory, ad_soyad_listesi)
 
-    if matched_files:
-        print("Files containing specified names:")
-        for file_path, matches in matched_files:
-            print(f"\nFile: {file_path}")
-            for match in matches:
-                print(f"    {match}")
-    else:
-        print("No files containing the specified names were found.")
-```
 Run the Script:
 Execute the script from your command line.
 
