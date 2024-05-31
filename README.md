@@ -1,7 +1,7 @@
 # basicDLP
 A simple DLP tool scans text files according to some rules
 
-This Python script scans files in a specified directory to find occurrences of names from a predefined list. It supports `.docx`, `.pdf`, `.xlsx`, and `.pptx` file formats.
+This Python script scans files in a specified directory to find occurrences of names from a predefined list. It supports `.doc`,`.docx`, `.pdf`, `.xls`, `.xlsx`, `.ppt` and `.pptx` file formats.
 
 ## Prerequisites
 
