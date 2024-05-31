@@ -1,75 +1,36 @@
-# basicDLP
-A simple DLP tool scans text files according to some rules
+# Basic DLP (Data Loss Prevention) Tool
+This Python application provides a basic Data Loss Prevention (DLP) functionality by scanning files within a specified directory for sensitive information patterns. It supports various file formats such as .docx, .pdf, .xlsx, .pptx, and .txt.
 
-This Python script scans files in a specified directory to find occurrences of names from a predefined list. It supports `.doc`,`.docx`, `.pdf`, `.xls`, `.xlsx`, `.ppt` and `.pptx` file formats.
+# Installation
+To use this tool, follow these steps:
 
-## Prerequisites
-
-Before you begin, ensure you have the following libraries installed:
-
-```bash
-pip install python-docx openpyxl python-pptx pdfminer.six
-```
-
-## Usage
-Prepare the Name List:
-Create a text file name_list.txt with the names you want to search for. Each name should be on a new line.
-
-## Example name_list.txt:
-
-Ahmet 
-Mehmet 
-Ayşe 
-Fatma 
-Ali 
-Sefa 
-Ahmet 
-Tunahan 
-
-## Modify the Script:
-Ensure the path to your name list is correctly set in the script.
+# Clone or download the repository to your local machine.
+Ensure you have Python installed on your system.
+Install the required dependencies by running:
 
 
-Run the Script:
-Execute the script from your command line.
+pip install python-docx openpyxl python-pptx pdfminer.six colorama tqdm
 
-```bash
+# Usage
+Running the Application
 
-python dlp.py
+Run the application by executing the dlp_tool.py file using Python. This will open a GUI (Graphical User Interface) window.
 
-```
-You will be prompted to enter the root directory to scan. The script will then search for the specified names in all supported files within that directory.
 
-## Script Details
-The script performs the following actions:
+python dlp_tool.py
 
-## Load Names:
-Reads the list of names from ad_soyad_listesi.txt.
+Scanning Files
+Select Directory: Click on the "Browse" button to select the directory you want to scan.
+Start Scan: Click on the "Start Scan" button to begin the scan process.
+View Results: The tool will display any files containing sensitive information patterns in the scrolled text area.
+Supported Patterns
+The tool searches for the following sensitive information patterns:
 
-## Extract Text:
-Extracts text from .docx, .pdf, .xlsx, and .pptx files.
+E-mail: Matches email addresses.
+TCKN: Matches Turkish ID numbers (TCKN).
+Telephone: Matches Turkish phone numbers.
+Student No: Matches 10-digit school numbers.
 
-## Find Matches:
-Searches for occurrences of the names in the extracted text.
-
-## Display Results:
-Prints the file paths and matched names if found.
-
-## Example Output
-Enter the root directory to scan: /path/to/directory
-
-## Files containing specified names:
-
-File: /path/to/directory/document1.docx
-    Ahmet Yılmaz
-    Fatma Şahin
-
-File: /path/to/directory/document2.pdf
-    Mehmet Demir
-    Ayşe Kaya
-## Notes
-Ensure the name list file (name_list.txt) is correctly formatted and located at the specified path.
-The script skips temporary files (starting with ~$).
-## License
-This project is licensed under the MIT License. 
+# Developer Information
+This application is developed by Salih KİRAZ. For any inquiries or feedback, you can reach out via email at salihk06@gmail.com.
 
